@@ -10,7 +10,7 @@ function Actors() {
       .then(r => r.json())
       .then(data => setActors(data))
       .catch(error => console.error(error));
-   })
+   },[])
 
   const actorList = actors.map((actor) => <ActorsCard key={actor.id} name={actor.name} movies={actor.movies}/>)
 
